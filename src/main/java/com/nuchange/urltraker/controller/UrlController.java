@@ -16,17 +16,17 @@ public class UrlController {
   @Autowired UrlService service;
 
   @GetMapping("/storeurl")
-  public ResponseEntity saveUrl(@RequestParam("url") String url) {
+  public ResponseEntity saveUrl(@RequestParam(required = true) String url) {
     return service.saveUrl(url);
   }
 
   @GetMapping("/get")
-  public String getUrl(@RequestParam("url") String url) {
+  public String getUrl(@RequestParam(required = true) String url) {
     return service.getUrl(url);
   }
 
   @GetMapping("/count")
-  public int getCount(@RequestParam("url") String url) {
+  public int getCount(@RequestParam(required = true) String url) {
     return service.getCount(url);
   }
 

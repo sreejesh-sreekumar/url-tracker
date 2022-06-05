@@ -24,11 +24,7 @@ public class UrlServiceImpl implements UrlService {
     }
     synchronized (urlMap) {
       String[] urlArray = url.split("[.]");
-      if (urlMap.containsKey(urlArray[0])) {
-        urlMap.put(urlArray[0], urlMap.get(urlArray[0]) + 1);
-      } else {
         urlMap.put(urlArray[0], 0);
-      }
       return new ResponseEntity(HttpStatus.OK);
     }
   }

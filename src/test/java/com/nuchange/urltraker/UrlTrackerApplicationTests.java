@@ -62,7 +62,7 @@ class UrlTrackerApplicationTests {
 		service.saveUrl("google.com");
 		service.getUrl("google.com");
 		int response = service.getCount("google.com");
-		assertEquals(4,response);
+		assertEquals(1,response);
 	}
 
 }
